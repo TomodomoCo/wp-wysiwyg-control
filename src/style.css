@@ -1,0 +1,44 @@
+.wysiwyg-control {
+	border: 1px solid #8d96a0;
+	border-radius: 4px;
+}
+
+.wysiwyg-control .wysiwyg-control__toolbar {
+	border: 0;
+	margin: 0;
+	top: 0;
+	position: unset;
+	-webkit-position: unset;
+	transform: unset;
+}
+
+.wysiwyg-control .wysiwyg-control__toolbar:empty {
+	background: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.wysiwyg-control .wysiwyg-control__toolbar .mce-panel {
+	display: block !important;
+}
+
+.wysiwyg-control .wysiwyg-control__toolbar .mce-panel,
+.wysiwyg-control .wysiwyg-control__toolbar .mce-toolbar-grp {
+	background: transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/**
+ * Because the editor is wrapped in `<BaseControl />`, TinyMCE
+ * will inherit the BaseControl styles by default. Here, we are
+ * resetting the styles to match the Block Editor defaults, but
+ * you can change them if you wish.
+ */
+.wysiwyg-control .wysiwyg-control__body.mce-content-body {
+	padding: 7px 12px;
+	font-family: 'Noto Serif', serif;
+	font-size: 16px;
+	line-height: 1.8;
+	color: #191e23
+}
