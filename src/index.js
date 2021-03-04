@@ -5,6 +5,7 @@ import { BaseControl } from '@wordpress/components';
 import { Component } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
 import { F10 } from '@wordpress/keycodes';
+import domReady from '@wordpress/dom-ready';
 
 /**
  * External dependencies
@@ -48,11 +49,7 @@ class WysiwygControl extends Component {
 			suffix,
 		} );
 
-		if ( document.readyState === 'complete' ) {
-			this.initialize();
-		} else {
-			window.addEventListener( 'DOMContentLoaded', this.initialize );
-		}
+		domReady(() => this.initialize());
 	}
 
 	componentWillUnmount() {
